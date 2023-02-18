@@ -1,0 +1,12 @@
+# Rime schema settings
+# encoding: utf-8
+# 
+
+patch:
+  speller:
+    max_code_length: 4
+    auto_select: true
+    auto_select_unique_candidate: true
+
+
+    
