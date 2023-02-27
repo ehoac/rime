@@ -1,7 +1,7 @@
-.place_holder
+#.place_holder
 user.yaml
 
-sync/
-build/
-*.userdb/
-opencc/
+#sync/
+#build/
+#*.userdb/
+#opencc/
