@@ -1,48 +1,35 @@
 patch:
   menu:
     page_size: 9
-  "style/font_face": "明兰" # 字體名稱，從記事本等處的系統字體對話框裏能看到
-  "style/font_point": 16 # 字號，只認數字的，不認「五號」、「小五」這樣的
   schema_list:
     - schema: wubixinshiji
-    - schema: pinyin_simp
-  ascii_composer/good_old_caps_lock: false
+    # - schema: emoji         # emoji表情
   ascii_composer/switch_key:
     Caps_Lock: noop 
     Control_L: noop
     Control_R: noop
     Eisu_toggle: clear
-    Shift_L: noop
-    # Shift_L: inline_ascii
+    # Shift_L: noop 
     Shift_R: noop
 
   # 快捷键
   "key_binder/bindings":
-    - set_option: ascii_mode
-      accept: Escape
-      when: always
-    - set_option: ascii_mode
-      accept: Shift_L
-      when: always
-    - set_option: ascii_mode
-      accept: Super_L
-      when: always
-    - unset_option: ascii_mode
-      accept: Control_R
-      when: always
     - { when: has_menu, accept: semicolon, send: 2 }              # ":" (分号)选择第 2 个候选词
     - { when: has_menu, accept: apostrophe, send: 3 }             # "'" (引号)选择第 3 个候选词
     - { when: composing, accept: Shift+Tab, send: Shift+Left }    # "Shift+Tab" 键向左选拼音分词
     - { when: composing, accept: Control+a, send: Home }          # "Control+a" 光标移至首
     - { when: composing, accept: Control+e, send: End }           # "Control+e" 光标移至尾
     - { when: composing, accept: Control+g, send: Escape }        # "Control+g" 清码
-    - { when: composing, accept: Return, send: commit_code }           # "Return" 回车清码
+    - { when: composing, accept: Return, send: Escape }           # "Return" 回车清码
     - { when: composing, accept: Escape, send: Escape }           # "Return" 回车清码
+    - { when: composing, accept: Shift_L, send: commit_code }           # "Return" 回车清码
     - { when: always, accept: Shift+space, toggle: ascii_mode }        # 中/英文切换
+    - { when: always, accept: Control+0, set_option: ascii_mode }        # 中/英文切换
+    - { when: always, accept: Control+9, unset_option: ascii_mode }        # 中/英文切换
     - { when: always, accept: Control+Shift+3, toggle: full_shape }        # 全角/半角切换
     - { when: always, accept: Control+Shift+4, toggle: simplification }    # 繁简体切换
     - { when: always, accept: Control+Shift+5, toggle: extended_charset }  # 通用/增广切换（显示生僻字）
     - { when: composing, accept: Control+b, send: Left }           # "Control+b" 移动光标
     - { when: composing, accept: Control+f, send: Right }          # "Control+f" 向右选择候选词
-    - { when: composing, accept: Control+h, send: BackSpace }      # "Control+h" 删除输入码
-
+    - { when: composing, accept: Control+d, send: BackSpace }      # "Control+h" 删除输入码
+      

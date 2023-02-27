@@ -4,3 +4,4 @@ user.yaml
 sync/
 build/
 *.userdb/
+opencc/

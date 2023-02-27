@@ -16,7 +16,7 @@ schema:
 
 switches:
   - name: ascii_mode
-    reset: 0
+    reset: 1
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
@@ -47,9 +47,19 @@ engine:
   translators:
     - punct_translator
     - reverse_lookup_translator
+    - table_translator@custom_phrase
     - table_translator
   filters:
     - simplifier@emoji_suggestion
+
+# 自定义短语
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: false
+  initial_quality: 1
 
 speller:
   delimiter: " ;'"

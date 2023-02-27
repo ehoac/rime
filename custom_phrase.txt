@@ -12,5 +12,10 @@
 Rime 输入法引擎	rime	3
 Rime Input Method Engine	rime	2
 http://code.google.com/p/rimeime/	rime	1
-各位领导好：	gwl	1
-祝好！	zh  1
+各位领导好：	zgwl	1
+品控人员反馈    zpk 1
+现场问题    zxc 1    
+解决方案    zjjfa   1
+问题原因    zwtyy   1
+影响功能    zyxgn   1
+祝好！	zzh  1
