@@ -37,19 +37,13 @@ patch:
       ascii_mode: true
       no_inline: true
     com.microsoft.VSCode:
-      ascii_mode: true
+      ascii_mode: false
     com.tencent.xinWeChat:
       ascii_mode: false
-    cn.apifox.app:
-      ascii_mode: true
     pro.writer.mac:
       ascii_mode: false
     md.obsidian:
       ascii_mode: false
-    com.hankinsoft.osx.sqlpro.oracle:
-      ascii_mode: true
-    com.hankinsoft.osx.sqlprostudio:
-      ascii_mode: true
     com.apple.freeform:
       ascii_mode: false
 
