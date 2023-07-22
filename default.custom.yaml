@@ -6,11 +6,11 @@ patch:
     # - schema: emoji         # emoji表情
   ascii_composer/good_old_caps_lock: false
   ascii_composer/switch_key:
-    Caps_Lock: noop 
+    Caps_Lock: commit_code 
     Control_L: noop
     Control_R: noop
     Eisu_toggle: clear
-    # Shift_L: noop 
+    Shift_L: noop 
     Shift_R: noop
 
   # 快捷键
@@ -27,6 +27,7 @@ patch:
     - { when: always, accept: Shift+space, toggle: ascii_mode }        # 中/英文切换
     - { when: always, accept: Control+0, set_option: ascii_mode }        # 中/英文切换
     - { when: always, accept: Control+9, unset_option: ascii_mode }        # 中/英文切换
+    - { when: always, accept: Control, unset_option: ascii_mode }        # 中/英文切换
     - { when: always, accept: Control+Shift+3, toggle: full_shape }        # 全角/半角切换
     - { when: always, accept: Control+Shift+4, toggle: simplification }    # 繁简体切换
     - { when: always, accept: Control+Shift+5, toggle: extended_charset }  # 通用/增广切换（显示生僻字）
