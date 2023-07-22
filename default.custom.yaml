@@ -4,6 +4,7 @@ patch:
   schema_list:
     - schema: wubixinshiji
     # - schema: emoji         # emoji表情
+  ascii_composer/good_old_caps_lock: false
   ascii_composer/switch_key:
     Caps_Lock: noop 
     Control_L: noop
@@ -20,7 +21,7 @@ patch:
     - { when: composing, accept: Control+a, send: Home }          # "Control+a" 光标移至首
     - { when: composing, accept: Control+e, send: End }           # "Control+e" 光标移至尾
     - { when: composing, accept: Control+g, send: Escape }        # "Control+g" 清码
-    - { when: composing, accept: Return, send: Escape }           # "Return" 回车清码
+    - { when: composing, accept: Return, send: commit_code }           # "Return" 回车清码
     - { when: composing, accept: Escape, send: Escape }           # "Return" 回车清码
     - { when: composing, accept: Shift_L, send: commit_code }           # "Return" 回车清码
     - { when: always, accept: Shift+space, toggle: ascii_mode }        # 中/英文切换
